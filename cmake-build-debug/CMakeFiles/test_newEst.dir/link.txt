@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread -g CMakeFiles/test_newEst.dir/test/test_newEst.cpp.o -o test_newEst 

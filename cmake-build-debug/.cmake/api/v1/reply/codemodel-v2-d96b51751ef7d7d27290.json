@@ -1,0 +1,199 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "lib",
+					"jsonFile" : "directory-lib-Debug-c12f15c6f888b43a891c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						5,
+						10
+					]
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						4,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "RobBIE_V2_SIMULATE",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "mujocoTest3D",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "glfwex::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-glfwex-Debug-12f85427585e4c0d2d61.json",
+					"name" : "glfwex",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "lodepng::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-lodepng-Debug-473b143c5f6c46aca66f.json",
+					"name" : "lodepng",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-b9d0163c16d815d5e254.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "platformui::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-platformui-Debug-cb0d51e565eaaaf4fb48.json",
+					"name" : "platformui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "robbie::@145eef247bfb46b6828c",
+					"jsonFile" : "target-robbie-Debug-973312531a374d8f9b21.json",
+					"name" : "robbie",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "simulate::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-simulate-Debug-8eb309c789833e6c3066.json",
+					"name" : "simulate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_k::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_k-Debug-5e97d97036997851f1af.json",
+					"name" : "test_k",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_newEst::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_newEst-Debug-7df0e60a19bbb294556e.json",
+					"name" : "test_newEst",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_standing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_standing-Debug-82a049ce9eddd3bfb020.json",
+					"name" : "test_standing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "tools::@145eef247bfb46b6828c",
+					"jsonFile" : "target-tools-Debug-b2784e5228defab4e756.json",
+					"name" : "tools",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uitools::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-uitools-Debug-2b51d46504a0603cad9d.json",
+					"name" : "uitools",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lavine/project/201v2/cmake-build-debug",
+		"source" : "/home/lavine/project/201v2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

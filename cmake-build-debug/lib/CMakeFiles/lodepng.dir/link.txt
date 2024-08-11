@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/lavine/project/201v2/lib/lib/liblodepng.a CMakeFiles/lodepng.dir/lodepng.cpp.o
+/usr/bin/ranlib /home/lavine/project/201v2/lib/lib/liblodepng.a

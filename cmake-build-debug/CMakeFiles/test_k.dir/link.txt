@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread -g CMakeFiles/test_k.dir/test/test_k.cpp.o CMakeFiles/test_k.dir/src/parameters/parameters.cpp.o -o test_k 

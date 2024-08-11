@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/lavine/project/201v2/lib/lib/libglfwex.a CMakeFiles/glfwex.dir/glfw_dispatch.cc.o CMakeFiles/glfwex.dir/glfw_adapter.cc.o
+/usr/bin/ranlib /home/lavine/project/201v2/lib/lib/libglfwex.a

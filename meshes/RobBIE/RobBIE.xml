@@ -1,0 +1,120 @@
+<mujoco model="RobBIE">
+    <compiler angle="radian" meshdir="/home/sky/Downloads/2023-10-25/RobBIE/meshes" />
+    <size njmax="500" nconmax="100" />
+    <option timestep="0.0025" gravity=" 0 0 -9.81"/>
+    <visual>
+<!--        <global realtime="1"/>-->
+        <quality shadowsize='4096'/>
+        <map znear='0.05'/>
+    </visual>
+    <default>
+        <geom contype="0" conaffinity="0" />
+    </default>
+    <default class="collision">
+        <geom material="collision" contype="1" user="2"/>
+        <default class="collision-left">
+            <geom contype="4" conaffinity="2"/>
+        </default>
+        <default class="collision-right">
+            <geom contype="2" conaffinity="4"/>
+        </default>
+    </default>
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="0.4 0.6 0.8" width="128" height="128"/>
+        <texture name="plane" type="2d" builtin="checker" rgb1="0.2 0.2 0.2" rgb2="0.3 0.3 0.3" width="500" height="500" />
+        <material name="plane" reflectance="0.0" texture="plane" texrepeat="1 1" texuniform="true"/>
+        <material name="robbie" rgba="0.9 0.5 0.1 1"/>
+        <material name="collision" rgba="0.1 0.5 0.9 0"/>
+        <mesh name="base_link" file="base_link.STL" />
+        <mesh name="left_ABAD" file="left_ABAD.STL" />
+        <mesh name="left_hip" file="left_hip.STL" />
+        <mesh name="left_knee" file="left_knee.STL" />
+        <mesh name="left_foot" file="left_foot.STL" />
+        <mesh name="right_ABAD" file="right_ABAD.STL" />
+        <mesh name="right_hip" file="right_hip.STL" />
+        <mesh name="right_knee" file="right_knee.STL" />
+        <mesh name="right_foot" file="right_foot.STL" />
+    </asset>
+    <worldbody>
+        <light directional="false" cutoff="60" exponent="1" diffuse=".5 .5 .5" specular=".1 .1 .1" pos="0.5 0.1 0.8" dir="-0.5 -0.1 -0.8"/>
+        <geom name="floor" pos="0  0  0" size="5 5 5" type="plane" material="plane" condim="3" conaffinity="15" contype="1" friction="0.8 0.1 0.1"/>
+        <body name="robbie-pelvis" pos="0 0 0.005">
+            <inertial pos="-0.00957302 0.00045781 0.08074191" quat="1 0 0 0" mass="4.0"  diaginertia="0.02672725 0.03051168 0.0238939"/>
+<!--            <inertial pos="-0.03811 0.00002 0.00197" quat="1 0 0 0" mass="2.21129"  fullinertia="0.01538974171 0.01515015693 0.010629557622 0.0000014128 -0.00399385977 0.00000015788"/>-->
+            <freejoint name="root" />
+<!--            <joint name="root" type="slide" axis="1 0 0" limited="false"/>-->
+<!--            <joint type="slide" axis="0 1 0" limited="false"/>-->
+<!--            <joint type="slide" axis="0 0 1" limited="false"/>-->
+<!--            <joint type="ball" limited="false"/>-->
+            <geom type="mesh"  rgba="0.792157 0.819608 0.933333 1" mesh="base_link" />
+            <geom type="sphere" size="0.075" pos="0 0 0.005" class="collision"/>
+            <site name="imu" size="0.01" pos="0 0 0.1209"/>
+            <geom type="mesh"  group="1" rgba="1 1 1 1" mesh="base_link" />
+            <body name="left_ABAD_S" pos="-0.0725 0.05 0">
+               <inertial pos="0.0726232 -0.00929317 -0.00028342" quat="0.504612 0.492544 0.506946 0.495755" mass="0.626316" diaginertia="0.0001729 0.00039831 0.0002888" />
+                <joint name="left_ABAD" pos="0 0 0" axis="1 0 0" limited="true" range="-0.7894 0.7894" />
+                <geom type="mesh"  group="1" rgba="1 1 1 1" mesh="left_ABAD" />
+                <body name="left_hip_S" pos="0.0725 -0.008 0">
+                    <inertial pos="-0.00673888 0.05878615 -0.01550289" quat="0.689523 0.217216 0.065821 0.687781" mass="0.894962" diaginertia="0.00191913 0.00213769 0.00076782" />
+                    <joint name="left_hip" pos="0 0 0" axis="0 1 0" limited="true" range="-1.0526 1.0526" />
+                    <geom type="mesh" group="1" rgba="1 1 1 1" mesh="left_hip" />
+                    <body name="left_knee_S" pos="0 0.0817 -0.2115">
+                       <inertial pos="-0.00009906 0.00180491 -0.098068" quat="0.695073 -0.131764 -0.131938 0.694337" mass="0.150511" diaginertia="0.00126753 0.00127776 0.0001953" />
+                        <joint name="left_knee" pos="0 0 0" axis="0 1 0" limited="true" range="-2.632 2.632" />
+                        <geom type="mesh"  group="1" rgba="1 1 1 1" mesh="left_knee" />
+                        <geom name="left_foot" pos="-0.00193708 -0.0082 -0.222366" type="mesh"  group="1" rgba="0.752941 0.752941 0.752941 1" mesh="left_foot" />
+                        <geom name="left" pos="-0.00193708 -0.0082 -0.222366" class="collision-left" type="sphere" rgba="0 0 0 1" size="0.015" />
+                    </body>
+                </body>
+            </body>
+            <body name="right_ABAD_S" pos="-0.0725 -0.05 0">
+                <inertial pos="0.07272923 0.0099317 -0.00028342" quat="0.494988 0.506651 0.493309 0.504914" mass="0.626316" diaginertia="0.0001729 0.00039828 0.00028877" />
+                <joint name="right_ABAD" pos="0 0 0" axis="1 0 0" limited="true" range="-0.7892 0.7892" />
+                <geom type="mesh"  group="1" rgba="1 1 1 1" mesh="right_ABAD" />
+                <body name="right_hip_S" pos="0.0725 0.008 0">
+                    <inertial pos="-0.00339093 -0.05878615 -0.0165601" quat="0.687822 -0.0008958 0.145357 0.711176" mass="0.894962" diaginertia="0.00211542 0.00213769 0.00056053" />
+                    <joint name="right_hip" pos="0 0 0" axis="0 1 0" limited="true" range="-1.0526 1.0526" />
+                    <geom type="mesh"  group="1" rgba="1 1 1 1" mesh="right_hip" />
+                    <body name="right_knee_S" pos="0 -0.0817 -0.2115">
+                        <inertial pos="-0.00010844 -0.00180499 -0.098068" quat="0.694254 -0.13735 -0.137587 0.692976" mass="0.1505118" diaginertia="0.00126753 0.00127227 0.0001953" />
+                        <joint name="right_knee" pos="0 0 0" axis="0 1 0" limited="true" range="-2.632 2.632" />
+                        <geom type="mesh"  group="1" rgba="1 1 1 1" mesh="right_knee" />
+                        <geom name="right_foot" pos="-0.00193708 -0.0118 -0.222366" type="mesh"  group="1" rgba="0.752941 0.752941 0.752941 1" mesh="right_foot" />
+                        <geom name="right" pos="-0.00193708 -0.0082 -0.222366" class="collision-right" type="sphere" rgba="0 0 0 1"  size="0.015"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator>
+        <motor name="left_ABAD_motor"  joint="left_ABAD" gear="6" ctrllimited="true" ctrlrange="-3 3"/>
+        <motor name="left_hip_motor"  joint="left_hip" gear="6" ctrllimited="true" ctrlrange="-3 3"/>
+        <motor name="left_knee_motor"  joint="left_knee" gear="6" ctrllimited="true" ctrlrange="-3 3"/>
+        <motor name="right_ABAD_motor"  joint="right_ABAD" gear="6" ctrllimited="true" ctrlrange="-3 3"/>
+        <motor name="right_hip_motor"  joint="right_hip" gear="6" ctrllimited="true" ctrlrange="-3 3"/>
+        <motor name="right_knee_motor"  joint="right_knee" gear="6" ctrllimited="true" ctrlrange="-3 3"/>
+    </actuator>
+    <sensor>
+<!--        <actuatorpos name="left_ABAD"  actuator="left_ABAD" user="13"/>-->
+<!--        <actuatorpos name="left_hip"  actuator="left_hip" user="13"/>-->
+<!--        <actuatorpos name="left_knee"  actuator="left_knee" user="13"/>-->
+<!--        <actuatorpos name="right_ABAD"  actuator="right_ABAD" user="13"/>-->
+<!--        <actuatorpos name="right_hip"  actuator="right_hip" user="13"/>-->
+<!--        <actuatorpos name="right_knee"  actuator="right_knee" user="13"/>-->
+
+<!--        <framequat name="pelvis-orientation" objtype="site" objname="imu"/>-->
+<!--        <gyro name="pelvis-angular-velocity" site="imu" noise="3e-4" cutoff="34.9"/>-->
+<!--        <accelerometer name="pelvis-linear-acceleration" site="imu" noise="3.75e-4" cutoff="157"/>-->
+<!--        <magnetometer name="pelvis-magnetometer" site="imu"/>-->
+        <framequat name="pelvis-orientation" objtype="site" objname="imu"/>
+        <framelinvel name="pelvis-linvel"  objtype="site" objname="imu"/>
+        <frameangvel name="pelvis-angvel" objtype="site" objname="imu"/>
+        <gyro name="pelvis-angular-velocity" site="imu" noise="3e-4" cutoff="34.9"/>
+        <accelerometer name="pelvis-linear-acceleration" site="imu" noise="3.75e-4" cutoff="157"/>
+        <magnetometer name="pelvis-magnetometer" site="imu"/>
+<!--        <framepos name="lfoot-pos" objtype="site" objname="imu2"/>-->
+<!--        <framelinvel name="lfoot-linvel" objtype="site" objname="imu2"/>-->
+<!--        <framepos name="rfoot-pos" objtype="site" objname="imu3"/>-->
+<!--        <framelinvel name="rfoot-linvel" objtype="site" objname="imu3"/>-->
+    </sensor>
+</mujoco>

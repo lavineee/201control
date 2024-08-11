@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yeyinong/RobBIE/RobBIEv2/lib/lodepng.cpp
+lodepng.h
+/home/yeyinong/RobBIE/RobBIEv2/lib/lodepng.h
+limits.h
+-
+stdio.h
+-
+stdlib.h
+-
+
+/home/yeyinong/RobBIE/RobBIEv2/lib/lodepng.h
+string.h
+-
+vector
+-
+string
+-
+lodepng.h
+/home/yeyinong/RobBIE/RobBIEv2/lib/lodepng.h
+iostream
+-
+lodepng.h
+/home/yeyinong/RobBIE/RobBIEv2/lib/lodepng.h
+

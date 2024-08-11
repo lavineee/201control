@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RobBIE">
+  <mujoco>
+     <compiler meshdir="/home/sky/Downloads/2023-10-25/RobBIE/meshes" balanceinertia="true" discardvisual="false"/>
+  </mujoco>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0156193877555741 0.000182345207899927 0.0886989663564026"
+        rpy="0 0 0" />
+      <mass
+        value="1.6474097770275" />
+      <inertia
+        ixx="0.00338593778360563"
+        ixy="2.1971113305729E-07"
+        ixz="8.60575373312658E-07"
+        iyy="0.00240115842669287"
+        iyz="-7.07746264850654E-07"
+        izz="0.00332392685879041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link
+    name="left_ABAD">
+    <inertial>
+      <origin
+        xyz="0.0720984382438124 -0.0102291280564825 -0.000482706430687257"
+        rpy="0 0 0" />
+      <mass
+        value="0.257235646631152" />
+      <inertia
+        ixx="0.00015894651542337"
+        ixy="-1.93392639740281E-06"
+        ixz="-1.80358974913652E-07"
+        iyy="0.000361595023846168"
+        iyz="1.22132671673481E-06"
+        izz="0.000247247876470301" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/left_ABAD.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="left_ABAD_S"
+    type="revolute">
+    <origin
+      xyz="-0.0725 0.0499999999999908 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_ABAD" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.7894"
+      upper="0.7894"
+      effort="18"
+      velocity="31.4" />
+  </joint>
+  <link
+    name="left_hip">
+    <inertial>
+      <origin
+        xyz="-3.26850398397507E-05 0.055397733917648 -0.0150076368029083"
+        rpy="0 0 0" />
+      <mass
+        value="0.357159463392639" />
+      <inertia
+        ixx="0.0002661297880485"
+        ixy="7.39780266629475E-09"
+        ixz="1.80780377792657E-07"
+        iyy="0.000420678541654242"
+        iyz="-2.48417548539542E-06"
+        izz="0.000191036024032691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/left_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="left_hip_S"
+    type="revolute">
+    <origin
+      xyz="0.0725 -0.00800000000000285 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_ABAD" />
+    <child
+      link="left_hip" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.0526"
+      upper="1.0526"
+      effort="18"
+      velocity="31.4" />
+  </joint>
+  <link
+    name="left_knee">
+    <inertial>
+      <origin
+        xyz="-4.61793047061303E-08 0.00180000201161323 -0.0360992310344352"
+        rpy="0 0 0" />
+      <mass
+        value="0.030040029217063" />
+      <inertia
+        ixx="3.11313510055854E-05"
+        ixy="2.36053263982438E-12"
+        ixz="-5.98008406551221E-11"
+        iyy="3.3319252699132E-05"
+        iyz="-4.13309176747311E-13"
+        izz="3.17869737046125E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/left_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/left_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_knee_S"
+    type="revolute">
+    <origin
+      xyz="0 0.0817000000001674 -0.2115"
+      rpy="0 0 0" />
+    <parent
+      link="left_hip" />
+    <child
+      link="left_knee" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.632"
+      upper="2.632"
+      effort="18"
+      velocity="31.4" />
+  </joint>
+  <link
+    name="left_foot">
+    <inertial>
+      <origin
+        xyz="0.00158990856920642 0.00999994857216367 0.0152927004781659"
+        rpy="0 0 0" />
+      <mass
+        value="0.0449838300681837" />
+      <inertia
+        ixx="7.56629847353255E-06"
+        ixy="5.14855289402061E-11"
+        ixz="-5.90733968973277E-07"
+        iyy="7.52232377809343E-06"
+        iyz="7.31169784295025E-12"
+        izz="7.59278173373895E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/left_foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/left_foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftt_foot_S"
+    type="fixed">
+    <origin
+      xyz="-0.00193707615798923 -0.00820000000047881 -0.222365686989672"
+      rpy="0 0 0" />
+    <parent
+      link="left_knee" />
+    <child
+      link="left_foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_ABAD">
+    <inertial>
+      <origin
+        xyz="0.0721895984771259 0.0102291280545477 -0.000482701005471326"
+        rpy="0 0 0" />
+      <mass
+        value="0.257235646635761" />
+      <inertia
+        ixx="0.000158946520202127"
+        ixy="1.95347621023052E-06"
+        ixz="-2.32486124176377E-07"
+        iyy="0.000361595028043736"
+        iyz="-1.22134039194391E-06"
+        izz="0.000247247875875491" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/right_ABAD.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="right_ABAD_S"
+    type="revolute">
+    <origin
+      xyz="-0.0725 -0.0500000000000085 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_ABAD" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.7892"
+      upper="0.7892"
+      effort="18"
+      velocity="31.4" />
+  </joint>
+  <link
+    name="right_hip">
+    <inertial>
+      <origin
+        xyz="3.26851400440755E-05 -0.055397733907411 -0.0150076354351169"
+        rpy="0 0 0" />
+      <mass
+        value="0.357159463521501" />
+      <inertia
+        ixx="0.000268706378914576"
+        ixy="9.89040709866797E-09"
+        ixz="5.87524620596679E-10"
+        iyy="0.000423270173257364"
+        iyz="2.52050250240305E-06"
+        izz="0.000191052031575596" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/right_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="right_hip_S"
+    type="revolute">
+    <origin
+      xyz="0.0725 0.00800000000000284 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_ABAD" />
+    <child
+      link="right_hip" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.0526"
+      upper="1.0526"
+      effort="18"
+      velocity="31.4" />
+  </joint>
+  <link
+    name="right_knee">
+    <inertial>
+      <origin
+        xyz="4.61792994654176E-08 -0.00180000201161726 -0.0360992310338663"
+        rpy="0 0 0" />
+      <mass
+        value="0.0300400292165565" />
+      <inertia
+        ixx="3.11313510060633E-05"
+        ixy="2.36053020040435E-12"
+        ixz="5.98008331890583E-11"
+        iyy="3.33192526996659E-05"
+        iyz="4.13305893075785E-13"
+        izz="3.17869737041181E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/right_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="right_knee_S"
+    type="revolute">
+    <origin
+      xyz="0 -0.0817000000001658 -0.2115"
+      rpy="0 0 0" />
+    <parent
+      link="right_hip" />
+    <child
+      link="right_knee" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.632"
+      upper="2.632"
+      effort="18"
+      velocity="31.4" />
+  </joint>
+  <link
+    name="right_foot">
+    <inertial>
+      <origin
+        xyz="0.00158990856769862 0.00999994856188979 0.0152927004698789"
+        rpy="0 0 0" />
+      <mass
+        value="0.0449838300766633" />
+      <inertia
+        ixx="7.56629847693837E-06"
+        ixy="5.14833033585987E-11"
+        ixz="-5.90733967580384E-07"
+        iyy="7.52232377734578E-06"
+        iyz="7.3175427212442E-12"
+        izz="7.59278173465422E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/right_foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="right_foot_S"
+    type="fixed">
+    <origin
+      xyz="-0.00193707615833201 -0.0117999999995178 -0.222365686989672"
+      rpy="0 0 0" />
+    <parent
+      link="right_knee" />
+    <child
+      link="right_foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

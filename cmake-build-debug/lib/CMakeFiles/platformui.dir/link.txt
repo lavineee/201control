@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/lavine/project/201v2/lib/lib/libplatformui.a CMakeFiles/platformui.dir/platform_ui_adapter.cc.o
+/usr/bin/ranlib /home/lavine/project/201v2/lib/lib/libplatformui.a

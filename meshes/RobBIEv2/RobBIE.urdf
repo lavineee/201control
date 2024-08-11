@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RobBIE">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00049608 -0.00016305 -0.0061308"
+        rpy="0 0 0" />
+      <mass
+        value="0.63593" />
+      <inertia
+        ixx="0.0013255"
+        ixy="5.943E-07"
+        ixz="-8.3217E-07"
+        iyy="0.00054644"
+        iyz="-3.0127E-07"
+        izz="0.001818" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="-0.0833392729078762 4.30912485106447E-05 -0.0680906348517346"
+        rpy="0 0 0" />
+      <mass
+        value="0.272095200526926" />
+      <inertia
+        ixx="0.000383333375911642"
+        ixy="9.7756842106712E-09"
+        ixz="-4.03217159439514E-05"
+        iyy="0.00028189856302184"
+        iyz="2.58446143737978E-08"
+        izz="0.000230423463477722" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0 0.0950000000000001 -0.0325000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.0752268623385352 6.93889390390723E-18 -2.72936410972147E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.600785150905696" />
+      <inertia
+        ixx="0.000574158430012592"
+        ixy="1.64237037730086E-12"
+        ixz="6.6542307037773E-11"
+        iyy="0.000722347145409727"
+        iyz="2.34899486632646E-08"
+        izz="0.000521722548388834" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="-0.0774999999999998 0 -0.0829999999999985"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-8.32667268468867E-16 -0.0133743120666531 -0.0828661903387305"
+        rpy="0 0 0" />
+      <mass
+        value="0.0777324713673763" />
+      <inertia
+        ixx="0.000258901769452416"
+        ixy="6.49753620509287E-22"
+        ixz="-1.87085755246833E-18"
+        iyy="0.000264491611753666"
+        iyz="-5.99381191815891E-20"
+        izz="6.98052699332921E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="0.0775 0.02755 0"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.00103901545984675 -0.00499997646436409 -0.138807343136007"
+        rpy="0 0 0" />
+      <mass
+        value="0.111018251545208" />
+      <inertia
+        ixx="0.000220301313690082"
+        ixy="-4.08780179609675E-08"
+        ixz="1.06751223925601E-05"
+        iyy="0.00022859083878876"
+        iyz="-2.35562493252424E-08"
+        izz="1.70178094216828E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="fixed">
+    <origin
+      xyz="0 -0.0225500000000036 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.00864862307295994 0.00501047578291557 -0.00499328485930005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0529345040591166" />
+      <inertia
+        ixx="8.52055709701753E-06"
+        ixy="1.05392387196302E-07"
+        ixz="-4.11798952731133E-06"
+        iyy="2.09139288022094E-05"
+        iyz="6.08483231184036E-08"
+        izz="1.32756018212309E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="continuous">
+    <origin
+      xyz="0.0775000000000673 -0.0275499999999999 0"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="4.44089209850063E-15 0.00499999999999999 -0.1"
+        rpy="0 0 0" />
+      <mass
+        value="0.128827875356578" />
+      <inertia
+        ixx="0.000508091455441874"
+        ixy="3.78400068357113E-21"
+        ixz="2.39596768718476E-17"
+        iyy="0.000516757026061978"
+        iyz="-6.82127025057855E-20"
+        izz="1.08127018760475E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="continuous">
+    <origin
+      xyz="-0.0259807621136 0.01 -0.0150000000001903"
+      rpy="0 0 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link7">
+    <inertial>
+      <origin
+        xyz="-0.0833392729078761 4.30912485106794E-05 -0.0680906348517344"
+        rpy="0 0 0" />
+      <mass
+        value="0.272095200526927" />
+      <inertia
+        ixx="0.000383333375911643"
+        ixy="9.77568421070187E-09"
+        ixz="-4.03217159439515E-05"
+        iyy="0.000281898563021842"
+        iyz="2.5844614373677E-08"
+        izz="0.000230423463477724" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="continuous">
+    <origin
+      xyz="0 -0.095 -0.0320000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link7" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link8">
+    <inertial>
+      <origin
+        xyz="0.0752268623385352 -5.55111512312578E-17 -2.72936427625492E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.600785150905695" />
+      <inertia
+        ixx="0.000574158430012591"
+        ixy="1.64237034388137E-12"
+        ixz="6.65423069005536E-11"
+        iyy="0.000722347145409727"
+        iyz="2.34899486631633E-08"
+        izz="0.000521722548388833" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint8"
+    type="continuous">
+    <origin
+      xyz="-0.0774999999999998 0 -0.0829999999999984"
+      rpy="0 0 0" />
+    <parent
+      link="link7" />
+    <child
+      link="link8" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="link9">
+    <inertial>
+      <origin
+        xyz="8.88178419700125E-16 0.0133743120666531 -0.0828661903387305"
+        rpy="0 0 0" />
+      <mass
+        value="0.0777324713673763" />
+      <inertia
+        ixx="0.000258901769452416"
+        ixy="1.60580575648843E-21"
+        ixz="1.94244507140112E-18"
+        iyy="0.000264491611753666"
+        iyz="8.18272202931304E-20"
+        izz="6.9805269933292E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint9"
+    type="continuous">
+    <origin
+      xyz="0.0774999999999973 -0.0275499999999999 0"
+      rpy="0 0 0" />
+    <parent
+      link="link8" />
+    <child
+      link="link9" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link10">
+    <inertial>
+      <origin
+        xyz="0.00103901545886409 0.00500002353620899 -0.138807343125621"
+        rpy="0 0 0" />
+      <mass
+        value="0.111018251531517" />
+      <inertia
+        ixx="0.000220301313684914"
+        ixy="4.07429557415981E-08"
+        ixz="1.06751223934286E-05"
+        iyy="0.000228590838785018"
+        iyz="2.35676416540097E-08"
+        izz="1.70178094185628E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint10"
+    type="continuous">
+    <origin
+      xyz="0 0.0225499999999993 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="link9" />
+    <child
+      link="link10" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link11">
+    <inertial>
+      <origin
+        xyz="-0.00864862307296399 -0.00501047578291555 -0.0049932848592928"
+        rpy="0 0 0" />
+      <mass
+        value="0.0529345040591166" />
+      <inertia
+        ixx="8.52055709701076E-06"
+        ixy="-1.05392387196347E-07"
+        ixz="-4.11798952730743E-06"
+        iyy="2.09139288022094E-05"
+        iyz="-6.08483231183171E-08"
+        izz="1.32756018212376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint11"
+    type="continuous">
+    <origin
+      xyz="0.07749999999997 0.0275499999999999 0"
+      rpy="0 0 0" />
+    <parent
+      link="link8" />
+    <child
+      link="link11" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link12">
+    <inertial>
+      <origin
+        xyz="-1.31006316905768E-14 -0.00499999999999995 -0.1"
+        rpy="0 0 0" />
+      <mass
+        value="0.128827875356578" />
+      <inertia
+        ixx="0.000508091455441874"
+        ixy="1.20699650765508E-21"
+        ixz="-6.317674646435E-17"
+        iyy="0.000516757026061978"
+        iyz="1.95384753434887E-19"
+        izz="1.08127018760474E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE/meshes/link12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint12"
+    type="continuous">
+    <origin
+      xyz="-0.0259807621135174 -0.00999999999999994 -0.0149999999999501"
+      rpy="0 0 0" />
+    <parent
+      link="link11" />
+    <child
+      link="link12" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>

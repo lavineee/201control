@@ -1,0 +1,174 @@
+<mujoco model="RobBIE">
+  <compiler angle="radian" autolimits="true"/>
+
+  <default>
+<!--    <geom contype="0" conaffinity="0" condim="1" solref="0.005 1"/>-->
+  </default>
+
+  <!--  <option timestep='0.0005' iterations="50" solver='PGS' gravity='0 0 -9.81'/>-->
+  <option timestep='0.001' iterations="50" solver='PGS' gravity='0 0 -9.81' noslip_iterations="20">
+    <flag sensornoise="disable"/>
+  </option>
+
+  <visual>
+    <quality shadowsize='4096'/>
+    <!--    <map znear='0.05'/>-->
+    <global realtime="1" />
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.4 0.6 0.8" width="128" height="128"/>
+    <texture name="plane" type="2d" builtin="checker" rgb1="0.2 0.2 0.2" rgb2="0.3 0.3 0.3" width="500" height="500" />
+    <material name="plane" reflectance="0.0" texture="plane" texrepeat="1 1" texuniform="true"/>
+
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="link1" file="link1.STL"/>
+    <mesh name="link2" file="link2.STL"/>
+    <mesh name="link3" file="link3.STL"/>
+    <mesh name="link4" file="link4.STL"/>
+    <mesh name="link5" file="link5.STL"/>
+    <mesh name="link6" file="link6.STL"/>
+    <mesh name="link7" file="link7.STL"/>
+    <mesh name="link8" file="link8.STL"/>
+    <mesh name="link9" file="link9.STL"/>
+    <mesh name="link10" file="link10.STL"/>
+    <mesh name="link11" file="link11.STL"/>
+    <mesh name="link12" file="link12.STL"/>
+  </asset>
+
+  <worldbody>
+    <light directional="false" cutoff="60" exponent="1" diffuse=".5 .5 .5" specular=".1 .1 .1" pos="0.5 0.1  0.8" dir="-0.5 -0.1 -0.8"/>
+    <geom name="floor" pos="0  0  0" size="20 20 20" type="plane" material="plane" condim="4" conaffinity="15"  contype="15" friction="1 1 1"/>
+    <body name="RobBIEv2" pos="0 0 0.52">
+      <inertial pos="0.00098268 -0.00028286 -0.00423937" mass="1.9031" fullinertia="0.01281305 0.00134280 0.01296014 -0.00000134 0.00004162 -0.00000969"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="base_link" contype="4" conaffinity="4"/>
+
+      <joint type="slide" axis="1 0 0" limited="false" range="-0.01 0.01"/>
+      <joint type="slide" axis="0 1 0" limited="false" range="-0.01 0.01"/>
+      <joint type="slide" axis="0 0 1" limited="false" range="-0.01 0.01"/>
+      <joint axis="1 0 0" limited="false" range="-0.01 0.01"/>
+      <joint axis="0 1 0" limited="false" range="-0.01 0.01"/>
+      <joint axis="0 0 1" limited="false" range="-0.01 0.01"/>
+
+      <site name="imu" size="0.01" pos="0. 0 0."/>
+      <body name="link1" pos="0 0.095 -0.0325" gravcomp="0">
+        <inertial pos="-0.08367 4.367e-05 -0.068597" mass="0.272095" fullinertia="0.00108666 0.00115819 0.00059975 -0.00000058 0.00038015 -0.0000054"/>
+        <joint name="joint1" pos="0 0 0" axis="0 0 1"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="link1" contype="1" conaffinity="0"/>
+        <body name="link2" pos="-0.0775 0 -0.083" gravcomp="0">
+          <inertial pos="0.07491 0 0" mass="1.5432" fullinertia="0.00345285 0.00223994 0.00456425 0 0 -0.00000596"/>
+          <joint name="joint2" pos="0 0 0" axis="1 0 0"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="link2" contype="1" conaffinity="0"/>
+          <body name="link3" pos="0.0775 0.02755 0" gravcomp="0">
+            <inertial pos="0. -0.01292658 -0.07828769" mass="0.16455701" fullinertia="0.00079467 0.00080412 0.00001767 0 0 0.00002671"/>
+            <joint name="joint3" pos="0 0 0" axis="0 1 0"/>
+            <geom type="mesh" rgba="1 1 1 1" mesh="link3" contype="1" conaffinity="0"/>
+            <body name="link4" pos="0 -0.02255 -0.2" gravcomp="0">
+              <inertial pos="-0.00036421 -0.00499997 -0.11979679" mass="0.18191" fullinertia="0.00116060 0.00118037 0.00002967 0.00000008 -0.00006530 0.00000005"/>
+              <joint name="joint4" pos="0 0 0" axis="0 1 0"/>
+              <geom type="mesh" rgba="1 1 1 1" mesh="link4" contype="1" conaffinity="0"/>
+              <site name="imu_leftFoot" size="0.01" pos="0. -0.005 -0.225"/>
+            </body>
+          </body>
+          <body name="link5" pos="0.0775 -0.02755 0" gravcomp="0">
+            <inertial pos="-0.00864862 0.00501048 -0.00499328" mass="0.0529245" fullinertia="0.00000852 0.00002091 0.00001328 -0.00000011 0.00000412 -0.00000006"/>
+            <joint name="joint5" pos="0 0 0" axis="0 1 0"/>
+            <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link5" contype="1" conaffinity="0"/>
+            <body name="link6" pos="-0.0259808 0.01 -0.015" gravcomp="0">
+              <inertial pos="0 0.005 -0.1" mass="0.128828" fullinertia="0.00050809 0.00051676 0.00001081 0 0 0"/>
+              <joint name="joint6" pos="0 0 0" axis="0 1 0"/>
+              <geom type="mesh" rgba="1 1 1 1" mesh="link6" contype="1" conaffinity="0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="link7" pos="0 -0.095 -0.032" gravcomp="0">
+        <inertial pos="-0.08367 4.367e-05 -0.068597" mass="0.272095" fullinertia="0.00108666 0.00115819 0.00059975 -0.00000058 0.00038015 -0.0000054"/>
+        <joint name="joint7" pos="0 0 0" axis="0 0 1"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="link7" contype="0" conaffinity="1"/>
+        <body name="link8" pos="-0.0775 0 -0.083" gravcomp="0">
+          <inertial pos="0.07491 0 0" mass="1.5432" fullinertia="0.00345285 0.00223994 0.00456425 0 0 -0.00000596"/>
+          <joint name="joint8" pos="0 0 0" axis="1 0 0"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="link8" contype="0" conaffinity="1"/>
+          <body name="link9" pos="0.0775 -0.02755 0" gravcomp="0">
+            <inertial pos="0. 0.01292658 -0.07828769" mass="0.16455701" fullinertia="0.00079467 0.00080412 0.00001767 0 0 -0.00002671"/>
+            <joint name="joint9" pos="0 0 0" axis="0 1 0"/>
+            <geom type="mesh" rgba="1 1 1 1" mesh="link9" contype="0" conaffinity="1"/>
+            <body name="link10" pos="0 0.02255 -0.2" gravcomp="0">
+              <inertial pos="-0.00036421 0.00499997 -0.11979679" mass="0.18191" fullinertia="0.00116060 0.00118037 0.00002967 -0.00000008 -0.00006530 -0.00000005"/>
+              <joint name="joint10" pos="0 0 0" axis="0 1 0"/>
+              <geom type="mesh" rgba="1 1 1 1" mesh="link10" contype="0" conaffinity="1"/>
+              <site name="imu_rightFoot" size="0.01" pos="0. 0.005 -0.225"/>
+            </body>
+          </body>
+          <body name="link11" pos="0.0775 0.02755 0" gravcomp="0">
+            <inertial pos="-0.00864862 -0.00501048 -0.00499328" mass="0.0529245" fullinertia="0.00000852 0.00002091 0.00001328 0.00000011 0.00000412 0.00000006"/>
+            <joint name="joint11" pos="0 0 0" axis="0 1 0"/>
+            <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link11" contype="0" conaffinity="1"/>
+            <body name="link12" pos="-0.0259808 -0.01 -0.015" gravcomp="0">
+              <inertial pos="0 -0.005 -0.1" mass="0.128828" fullinertia="0.00050809 0.00051676 0.00001081 0 0 0"/>
+              <joint name="joint12" pos="0 0 0" axis="0 1 0"/>
+              <geom type="mesh" rgba="1 1 1 1" mesh="link12" contype="0" conaffinity="1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <equality>
+    <connect body1="link6" body2="link4" anchor="0 0 -0.2" solimp="0.0 0.95 0.001 0.5 2" solref="0.002 1"/>
+    <connect body1="link12" body2="link10" anchor="0 0 -0.2" solimp="0.0 0.95 0.001 0.5 2" solref="0.002 1"/>
+  </equality>
+
+  <actuator>
+    <motor name="left_yaw_motor"  joint="joint1" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="left_abd_motor"  joint="joint2" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="left_pitch1_motor"  joint="joint3" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="left_pitch2_motor"  joint="joint5" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_yaw_motor"  joint="joint7" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_abd_motor"  joint="joint8" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_pitch1_motor"  joint="joint9" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_pitch2_motor"  joint="joint11" ctrllimited="false" ctrlrange="-30 30"/>
+  </actuator>
+
+  <sensor>
+    <framequat name="imu" objtype="site" objname="imu"/>
+    <gyro site="imu"/>
+    <accelerometer site="imu"/>
+
+    <actuatorpos name="left_yaw_pos"    actuator="left_yaw_motor" noise="0.01"/>
+    <actuatorpos name="left_abd_pos"   actuator="left_abd_motor" noise="0.01"/>
+    <actuatorpos name="left_pitch1_pos"    actuator="left_pitch1_motor" noise="0.01"/>
+    <actuatorpos name="left_pitch2_pos"    actuator="left_pitch2_motor" noise="0.01"/>
+
+    <actuatorpos name="right_yaw_pos"    actuator="right_yaw_motor" noise="0.01"/>
+    <actuatorpos name="right_abd_pos"   actuator="right_abd_motor" noise="0.01"/>
+    <actuatorpos name="right_pitch1_pos"    actuator="right_pitch1_motor" noise="0.01"/>
+    <actuatorpos name="right_pitch2_pos"    actuator="right_pitch2_motor" noise="0.01"/>
+
+    <actuatorvel name="left_yaw_vel"    actuator="left_yaw_motor" noise="0.01"/>
+    <actuatorvel name="left_abd_vel"   actuator="left_abd_motor" noise="0.01"/>
+    <actuatorvel name="left_pitch1_vel"    actuator="left_pitch1_motor" noise="0.01"/>
+    <actuatorvel name="left_pitch2_vel"    actuator="left_pitch2_motor" noise="0.01"/>
+    <actuatorvel name="right_yaw_vel"    actuator="right_yaw_motor" noise="0.01"/>
+    <actuatorvel name="right_abd_vel"   actuator="right_abd_motor" noise="0.01"/>
+    <actuatorvel name="right_pitch1_vel"    actuator="right_pitch1_motor" noise="0.01"/>
+    <actuatorvel name="right_pitch2_vel"    actuator="right_pitch2_motor" noise="0.01"/>
+
+    <actuatorfrc name="left_yaw_frc"    actuator="left_yaw_motor" noise="0.01"/>
+    <actuatorfrc name="left_abd_frc"   actuator="left_abd_motor" noise="0.01"/>
+    <actuatorfrc name="left_pitch1_frc"    actuator="left_pitch1_motor" noise="0.01"/>
+    <actuatorfrc name="left_pitch2_frc"    actuator="left_pitch2_motor" noise="0.01"/>
+    <actuatorfrc name="right_yaw_frc"    actuator="right_yaw_motor" noise="0.01"/>
+    <actuatorfrc name="right_abd_frc"   actuator="right_abd_motor" noise="0.01"/>
+    <actuatorfrc name="right_pitch1_frc"    actuator="right_pitch1_motor" noise="0.01"/>
+    <actuatorfrc name="right_pitch2_frc"    actuator="right_pitch2_motor" noise="0.01"/>
+
+    <framepos objtype="site" objname="imu"/>
+    <framepos objtype="site" objname="imu_leftFoot"/>
+    <framepos objtype="site" objname="imu_rightFoot"/>
+
+  </sensor>
+
+</mujoco>

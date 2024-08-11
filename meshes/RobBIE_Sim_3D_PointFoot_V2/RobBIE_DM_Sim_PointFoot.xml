@@ -1,0 +1,131 @@
+<mujoco model="RobBIE_DM_Sim_PointFoot">
+  <compiler angle="radian" autolimits="true"/>
+  <default>
+    <geom contype="0" conaffinity="0" condim="1" solref="0.005 1"/>
+  </default>
+  <!--  <option timestep='0.0005' iterations="50" solver='PGS' gravity='0 0 -9.81'/>-->
+  <option timestep='0.001' iterations="50" solver='PGS' gravity='0 0 -9.81' noslip_iterations="20">
+    <flag sensornoise="disable"/>
+  </option>
+
+  <visual>
+    <quality shadowsize='4096'/>
+    <!--    <map znear='0.05'/>-->
+    <global realtime="1" />
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.4 0.6 0.8" width="128" height="128"/>
+    <texture name="plane" type="2d" builtin="checker" rgb1="0.2 0.2 0.2" rgb2="0.3 0.3 0.3" width="500" height="500" />
+    <material name="plane" reflectance="0.0" texture="plane" texrepeat="1 1" texuniform="true"/>
+
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="Link_Left_Abd" file="Link_Left_Abd.STL"/>
+    <mesh name="Link_Left_Hip" file="Link_Left_Hip.STL"/>
+    <mesh name="Link_Left_Knee" file="Link_Left_Knee.STL"/>
+    <mesh name="Link_Right_Abd" file="Link_Right_Abd.STL"/>
+    <mesh name="Link_Right_Hip" file="Link_Right_Hip.STL"/>
+    <mesh name="Link_Right_Knee" file="Link_Right_Knee.STL"/>
+  </asset>
+  <worldbody>
+    <light directional="false" cutoff="60" exponent="1" diffuse=".5 .5 .5" specular=".1 .1 .1" pos="0.5 0.1 0.8" dir="-0.5 -0.1 -0.8"/>
+    <geom name="floor" pos="0  0  0" size="20 20 20" type="plane" material="plane" condim="3" conaffinity="15" friction=".7 .001 .001" contype="6"/>
+    <body name="robbie" pos="0 0 0.4">
+      <inertial pos="0. 0. 0." mass="4" fullinertia="0.02672725 0.03051168 0.0238939 -0.0001727 -0.00749081 -0.00002698"/>
+<!--      <freejoint />-->
+      <joint type="slide" axis="1 0 0" limited="false" range="-0.01 0.01"/>
+      <joint type="slide" axis="0 1 0" limited="false" range="-0.01 0.01"/>
+      <joint type="slide" axis="0 0 1" limited="false" range="-0.01 0.01"/>
+      <joint name="thetaX" type="hinge" axis="1 0 0" limited="false" range="-0.01 0.01"/>
+      <joint name="thetaY" type="hinge" axis="0 1 0" limited="false" range="-0.01 0.01"/>
+      <joint name="thetaZ" type="hinge" axis="0 0 1" limited="true" range="-0.01 0.01"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="base_link"  contype="2" conaffinity="2" />
+      <site name="imu_base" size="0.01" pos="0.0383611 0 0.1"/>
+      <site name="imu_vel" size="0.01" pos="0.0383611 0.05 -0.0448642"/>
+      <body name="Link_Left_Abd" pos="0 0.05 0" gravcomp="0">
+        <inertial pos="-0.00040156 -0.010229 -0.00048271" mass="0.62632" fullinertia="0.0001729 0.00039831 0.0002888 -1.26e-06 -8e-08 -2.55e-06"/>
+        <joint name="Joint_Left_Abd" pos="0 0 0" axis="1 0 0"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="Link_Left_Abd"  contype="1" conaffinity="1"/>
+        <body name="Link_Left_Hip" pos="0 0 0" gravcomp="0">
+          <inertial pos="-3.2685e-05 0.047398 -0.015008" mass="0.89496158" fullinertia="0.00218531 0.00213769 0.00049064 -4.9e-07 5.9e-07 0.0003668"/>
+          <joint name="Joint_Left_Hip" pos="0 0 0" axis="0 1 0"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link_Left_Hip" contype="1" conaffinity="1"/>
+          <body name="Link_Left_Knee" pos="0 0.0755 -0.2115" gravcomp="0">
+            <inertial pos="5.44392e-05 -5.44606e-05 -0.129563" mass="0.13249374" fullinertia="0.00104499 0.00105069 1.641e-05 0 4.5e-07 -4.5e-07"/>
+            <joint name="Joint_Left_Knee" pos="0 0 0" axis="0 1 0"/>
+            <geom type="mesh" rgba="1 1 1 1" mesh="Link_Left_Knee" contype="6" conaffinity="1"/>
+            <site name="imu_left_foot" size="0.025" pos="0 0. -0.21" rgba="0.5 0 0 0.5"/>
+          </body>
+        </body>
+      </body>
+      <body name="Link_Right_Abd" pos="0 -0.05 0" gravcomp="0">
+        <inertial pos="-0.000310402 0.0102291 -0.000482701" mass="0.62632" fullinertia="0.0001729 0.00039831 0.0002888 7.7e-07 8e-08 2.55e-06"/>
+        <joint name="Joint_Right_Abd" pos="0 0 0" axis="1 0 0"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="Link_Right_Abd" contype="1" conaffinity="1"/>
+        <body name="Link_Right_Hip" pos="0 0 0" gravcomp="0">
+          <inertial pos="3.26851e-05 -0.0473977 -0.0150076" mass="0.89496158" fullinertia="0.00218531 0.00213769 0.00049064 -4.9e-07 -5.9e-07 -0.0003668"/>
+          <joint name="Joint_Right_Hip" pos="0 0 0" axis="0 1 0"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link_Right_Hip" contype="1" conaffinity="1"/>
+          <body name="Link_Right_Knee" pos="0 -0.0755 -0.2115" gravcomp="0">
+            <inertial pos="-5.44392e-05 5.44606e-05 -0.129563" mass="0.132494" fullinertia="0.00104499 0.00105069 1.641e-05 0 -4.5e-07 4.5e-07"/>
+            <joint name="Joint_Right_Knee" pos="0 0 0" axis="0 1 0"/>
+            <geom type="mesh" rgba="1 1 1 1" mesh="Link_Right_Knee" contype="6" conaffinity="1"/>
+            <site name="imu_right_foot" size="0.025" pos="0 0. -0.21" rgba="0.5 0 0 0.5"/>
+          </body>
+        </body>
+      </body>
+    </body>
+<!--    <body>-->
+<!--      <joint type="slide" axis="1 0 0" limited="false" range="-0.01 0.01"/>-->
+<!--      <joint type="slide" axis="0 1 0" limited="false" range="-0.01 0.01"/>-->
+<!--      <joint type="slide" axis="0 0 1" limited="false" range="-0.01 0.01"/>-->
+<!--      <joint type="hinge" axis="1 0 0" limited="false" range="-0.01 0.01"/>-->
+<!--      <joint type="hinge" axis="0 1 0" limited="false" range="-0.01 0.01"/>-->
+<!--      <joint type="hinge" axis="0 0 1" limited="true" range="-0.01 0.01"/>-->
+<!--      <geom type="box" size="0.2 0.2 0.2" pos="1 0 1" contype="6" conaffinity="1"/>-->
+<!--    </body>-->
+  </worldbody>
+
+  <actuator>
+    <motor name="left_ABAD_motor"  joint="Joint_Left_Abd" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="left_hip_motor"  joint="Joint_Left_Hip" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="left_knee_motor"  joint="Joint_Left_Knee" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_ABAD_motor"  joint="Joint_Right_Abd" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_hip_motor"  joint="Joint_Right_Hip" ctrllimited="false" ctrlrange="-30 30"/>
+    <motor name="right_knee_motor"  joint="Joint_Right_Knee" ctrllimited="false" ctrlrange="-30 30"/>
+  </actuator>
+
+  <sensor>
+    <framequat       name="base_imu_quat"     objtype="site"  objname="imu_base"/>
+    <gyro    site="imu_base"/>
+
+    <actuatorpos name="left_ABAD_pos"    actuator="left_ABAD_motor" noise="0.01"/>
+    <actuatorpos name="left_hip_pos"   actuator="left_hip_motor" noise="0.01"/>
+    <actuatorpos name="left_knee_pos"    actuator="left_knee_motor" noise="0.01"/>
+    <actuatorpos name="right_ABAD_pos"    actuator="right_ABAD_motor" noise="0.01"/>
+    <actuatorpos name="right_hip_pos"   actuator="right_hip_motor" noise="0.01"/>
+    <actuatorpos name="right_knee_pos"    actuator="right_knee_motor" noise="0.01"/>
+
+
+    <actuatorvel name="left_ABAD_vel"    actuator="left_ABAD_motor" noise="0.1"/>
+    <actuatorvel name="left_hip_vel"   actuator="left_hip_motor" noise="0.1"/>
+    <actuatorvel name="left_knee_vel"    actuator="left_knee_motor" noise="0.1"/>
+    <actuatorvel name="right_ABAD_vel"    actuator="right_ABAD_motor" noise="0.1"/>
+    <actuatorvel name="right_hip_vel"   actuator="right_hip_motor" noise="0.1"/>
+    <actuatorvel name="right_knee_vel"    actuator="right_knee_motor" noise="0.1"/>
+
+    <actuatorfrc name="left_ABAD_frc"    actuator="left_ABAD_motor" noise="0.1"/>
+    <actuatorfrc name="left_hip_frc"   actuator="left_hip_motor" noise="0.1"/>
+    <actuatorfrc name="left_knee_frc"    actuator="left_knee_motor" noise="0.1"/>
+    <actuatorfrc name="right_ABAD_frc"    actuator="right_ABAD_motor" noise="0.1"/>
+    <actuatorfrc name="right_hip_frc"   actuator="right_hip_motor" noise="0.1"/>
+    <actuatorfrc name="right_knee_frc"    actuator="right_knee_motor" noise="0.1"/>
+
+
+    <accelerometer site="imu_base"/>
+
+    <framepos objtype="site" objname="imu_base"/>
+    <framelinvel objtype="site" objname="imu_vel"/>
+
+  </sensor>
+</mujoco>

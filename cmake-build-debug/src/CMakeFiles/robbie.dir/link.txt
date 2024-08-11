@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/lavine/project/201v2/src/lib/librobbie.a CMakeFiles/robbie.dir/robbie/Robbie.cpp.o
+/usr/bin/ranlib /home/lavine/project/201v2/src/lib/librobbie.a

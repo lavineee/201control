@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RobBIE_DM_Sim_PointFoot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.015619 0.00018235 0.088699"
+        rpy="0 0 0" />
+      <mass
+        value="1.6474" />
+      <inertia
+        ixx="0.0033859"
+        ixy="-2.1971E-07"
+        ixz="-8.6058E-07"
+        iyy="0.0024012"
+        iyz="7.0775E-07"
+        izz="0.0033239" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Left_Abd">
+    <inertial>
+      <origin
+        xyz="-0.00040156 -0.010229 -0.00048271"
+        rpy="0 0 0" />
+      <mass
+        value="0.25724" />
+      <inertia
+        ixx="0.00015895"
+        ixy="1.9339E-06"
+        ixz="1.8036E-07"
+        iyy="0.0003616"
+        iyz="-1.2213E-06"
+        izz="0.00024725" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Left_Abd.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Left_Abd.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Left_Abd"
+    type="continuous">
+    <origin
+      xyz="0 0.05 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Left_Abd" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Link_Left_Hip">
+    <inertial>
+      <origin
+        xyz="-3.2685E-05 0.047398 -0.015008"
+        rpy="0 0 0" />
+      <mass
+        value="0.35716" />
+      <inertia
+        ixx="0.00026905"
+        ixy="-9.0442E-09"
+        ixz="-6.9162E-08"
+        iyy="0.00042362"
+        iyz="2.5223E-06"
+        izz="0.00019105" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Left_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Left_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Left_Hip"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Left_Abd" />
+    <child
+      link="Link_Left_Hip" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Link_Left_Knee">
+    <inertial>
+      <origin
+        xyz="5.4439196037357E-05 -5.44605836409195E-05 -0.129562961865067"
+        rpy="0 0 0" />
+      <mass
+        value="0.13249373837602" />
+      <inertia
+        ixx="9.24803479669642E-05"
+        ixy="-4.79008643454152E-12"
+        ixz="1.43189072193144E-10"
+        iyy="9.67074550959918E-05"
+        iyz="-5.19472996612265E-12"
+        izz="1.75863549858176E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Left_Knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Left_Knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Left_Knee"
+    type="continuous">
+    <origin
+      xyz="0 0.0755 -0.2115"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Left_Hip" />
+    <child
+      link="Link_Left_Knee" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Link_Right_Abd">
+    <inertial>
+      <origin
+        xyz="-0.000310401522874057 0.0102291280545527 -0.000482701005471819"
+        rpy="0 0 0" />
+      <mass
+        value="0.257235646635761" />
+      <inertia
+        ixx="0.000158946520202127"
+        ixy="-1.95347621023058E-06"
+        ixz="2.32486124176433E-07"
+        iyy="0.000361595028043736"
+        iyz="1.22134039194398E-06"
+        izz="0.000247247875875491" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Right_Abd.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Right_Abd.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Right_Abd"
+    type="continuous">
+    <origin
+      xyz="0 -0.05 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Right_Abd" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Link_Right_Hip">
+    <inertial>
+      <origin
+        xyz="3.26851345418019E-05 -0.0473977339201697 -0.0150076354949633"
+        rpy="0 0 0" />
+      <mass
+        value="0.35715946365064" />
+      <inertia
+        ixx="0.000268246774986044"
+        ixy="-9.65519656479915E-09"
+        ixz="2.10729675456882E-08"
+        iyy="0.000422807886638686"
+        iyz="-2.51265267513326E-06"
+        izz="0.000191049176431411" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Right_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Right_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Right_Hip"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Right_Abd" />
+    <child
+      link="Link_Right_Hip" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Link_Right_Knee">
+    <inertial>
+      <origin
+        xyz="-5.44391961644596E-05 5.446058362224E-05 -0.129562961865578"
+        rpy="0 0 0" />
+      <mass
+        value="0.132493738374931" />
+      <inertia
+        ixx="9.2480347967787E-05"
+        ixy="-4.79008315959416E-12"
+        ixz="-1.4318908623588E-10"
+        iyy="9.67074550969495E-05"
+        iyz="5.19487000376974E-12"
+        izz="1.7586354985728E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Right_Knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobBIE_DM_Sim_PointFoot/meshes/Link_Right_Knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Right_Knee"
+    type="continuous">
+    <origin
+      xyz="0 -0.0755 -0.2115"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Right_Hip" />
+    <child
+      link="Link_Right_Knee" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>

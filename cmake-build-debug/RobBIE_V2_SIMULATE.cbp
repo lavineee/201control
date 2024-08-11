@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RobBIE_V2_SIMULATE"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\;CMake Files\lib\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/home/lavine/project/201v2/src/../lib/include"/>
+					<Add directory="/usr/include/opencv4"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/usr/lib/python3/dist-packages/numpy/core/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/home/lavine/project/201v2/src/../lib/include"/>
+					<Add directory="/usr/include/opencv4"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/usr/lib/python3/dist-packages/numpy/core/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_newEst">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/test_newEst" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_newEst"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_newEst/fast">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/test_newEst" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_newEst/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_standing">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/test_standing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_standing"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_standing/fast">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/test_standing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_standing/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_k">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/test_k" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_k"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_k/fast">
+				<Option output="/home/lavine/project/201v2/cmake-build-debug/test_k" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_k/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uitools">
+				<Option output="/home/lavine/project/201v2/lib/lib/libuitools.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 uitools"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uitools/fast">
+				<Option output="/home/lavine/project/201v2/lib/lib/libuitools.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 uitools/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lodepng">
+				<Option output="/home/lavine/project/201v2/lib/lib/liblodepng.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 lodepng"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lodepng/fast">
+				<Option output="/home/lavine/project/201v2/lib/lib/liblodepng.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 lodepng/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfwex">
+				<Option output="/home/lavine/project/201v2/lib/lib/libglfwex.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 glfwex"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfwex/fast">
+				<Option output="/home/lavine/project/201v2/lib/lib/libglfwex.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 glfwex/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="platformui">
+				<Option output="/home/lavine/project/201v2/lib/lib/libplatformui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 platformui"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="platformui/fast">
+				<Option output="/home/lavine/project/201v2/lib/lib/libplatformui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 platformui/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="simulate">
+				<Option output="/home/lavine/project/201v2/lib/lib/libsimulate.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 simulate"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="simulate/fast">
+				<Option output="/home/lavine/project/201v2/lib/lib/libsimulate.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 simulate/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tools">
+				<Option output="/home/lavine/project/201v2/src/lib/libtools.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/src/../lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 tools"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tools/fast">
+				<Option output="/home/lavine/project/201v2/src/lib/libtools.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/src/../lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 tools/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robbie">
+				<Option output="/home/lavine/project/201v2/src/lib/librobbie.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/src/../lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 robbie"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robbie/fast">
+				<Option output="/home/lavine/project/201v2/src/lib/librobbie.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lavine/project/201v2/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lavine/project/201v2/src"/>
+					<Add directory="/home/lavine/project/201v2/src/../lib/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 robbie/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/lavine/project/201v2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lavine/project/201v2/lib/glfw_adapter.cc">
+			<Option target="glfwex"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/glfw_dispatch.cc">
+			<Option target="glfwex"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/lodepng.cpp">
+			<Option target="lodepng"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/lodepng.h">
+			<Option target="lodepng"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/platform_ui_adapter.cc">
+			<Option target="platformui"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/simulate.cc">
+			<Option target="simulate"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/uitools.c">
+			<Option target="uitools"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/controller.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/controller.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/log/logFile.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/log/logFile.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/parameters/parameters.cpp">
+			<Option target="main"/>
+			<Option target="test_standing"/>
+			<Option target="test_k"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/parameters/parameters.h">
+			<Option target="main"/>
+			<Option target="test_standing"/>
+			<Option target="test_k"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/robbie/Robbie.cpp">
+			<Option target="robbie"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/robbie/Robbie.h">
+			<Option target="robbie"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/robbie/calculateRobBIE.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/robbie/calculateRobBIE.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/tools/tools.cpp">
+			<Option target="tools"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/tools/tools.h">
+			<Option target="tools"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/test/test_k.cpp">
+			<Option target="test_k"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/test/test_newEst.cpp">
+			<Option target="test_newEst"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/test/test_standing.cpp">
+			<Option target="test_standing"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+		<Unit filename="/home/lavine/project/201v2/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

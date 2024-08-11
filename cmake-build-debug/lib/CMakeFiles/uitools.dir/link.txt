@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/lavine/project/201v2/lib/lib/libuitools.a CMakeFiles/uitools.dir/uitools.c.o
+/usr/bin/ranlib /home/lavine/project/201v2/lib/lib/libuitools.a
