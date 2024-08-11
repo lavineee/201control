@@ -177,7 +177,7 @@ void Robbie::controlStandingLeg() {
     std::cout << pfoot << std::endl;
 
        Eigen::Matrix<double, 4, 4> &Jacobian = a;
-       jacobianRight(qMotor, a)
+
    // calculateGroundForce()
 
 
