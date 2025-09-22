@@ -43,13 +43,13 @@ The walking control loop is composed of four main modules:
 4. **Foot Placement Strategy**  
    - **Sagittal (x): Raibert heuristic**
      $$
-x_{foot} = \frac{T}{2}\dot x + b_x + k_v(\dot x - \dot x^*)
+      x_{foot} = \frac{T}{2}\dot x + b_x + k_v(\dot x - \dot x^*)
      $$
 
    - **Coronal (y): LIP + feedback**
      $$
-y_{foot} = -s \,\widehat{y}_{td} + k_y\bigl(\dot{\widehat{y}}_{td} - \dot y^*_{td}\bigr) + b_y^{(s)}
-$$
+      y_{foot} = -s \,\widehat{y}_{td} + k_y\bigl(\dot{\widehat{y}}_{td} - \dot y^*_{td}\bigr) + b_y^{(s)}
+     $$
 
 
 ---
