@@ -35,19 +35,22 @@ The walking control loop is composed of four main modules:
    - Smooth foot trajectory generation between step start and desired foot placement  
    - Geometric inverse kinematics + joint PD for torque output  
 
-   $$
+  $$
    \tau_{swing} = K_q (q^* - q) + D_q (\dot q^* - \dot q)
-   $$
+  $$
+
 
 4. **Foot Placement Strategy**  
    - **Sagittal (x): Raibert heuristic**
      $$
-     x_{foot} = \tfrac{T}{2}\dot x + b_x + k_v(\dot x - \dot x^*)
+x_{foot} = \frac{T}{2}\dot x + b_x + k_v(\dot x - \dot x^*)
      $$
+
    - **Coronal (y): LIP + feedback**
      $$
-     y_{foot} = -s \hat y_{td} + k_y(\hat{\dot y}_{td} - \dot y^*_{td}) + b_y^{(s)}
-     $$
+y_{foot} = -s \,\widehat{y}_{td} + k_y\bigl(\dot{\widehat{y}}_{td} - \dot y^*_{td}\bigr) + b_y^{(s)}
+$$
+
 
 ---
 
